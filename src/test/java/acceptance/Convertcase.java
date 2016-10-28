@@ -11,7 +11,6 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import net.sourceforge.htmlunit.corejs.javascript.ast.SwitchCase;
 
 public class Convertcase {
 	private WebDriver driver = null;
