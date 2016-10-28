@@ -13,7 +13,7 @@ Feature: Convertcase
 	Examples:
 	
     | site                     | botao            | input                 | output                |  
-	| https://convertcase.net/ | Capitalized Case | henrique cota camello | Henrique Cota Camello |
-	| https://convertcase.net/ | lower case       | HENRIQUE              | henrique              |
-	| https://convertcase.net/ | UPPER CASE       | henrique              | HENRIQUE              |
+    | https://convertcase.net/ | Capitalized Case | henrique cota camello | Henrique Cota Camello |
+    | https://convertcase.net/ | lower case       | HENRIQUE              | henrique              |
+    | https://convertcase.net/ | UPPER CASE       | henrique              | HENRIQUE              |
 	
