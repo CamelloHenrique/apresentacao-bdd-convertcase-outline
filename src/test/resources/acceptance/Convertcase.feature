@@ -15,5 +15,5 @@ Feature: Convertcase
     | site                     | botao            | input                 | output                |  
 	| https://convertcase.net/ | Capitalized Case | henrique cota camello | Henrique Cota Camello |
 	| https://convertcase.net/ | lower case       | HENRIQUE              | henrique              |
-	| https://convertcase.net/ | UPPER CASE       | henriqe               | HENRIQUE              |
+	| https://convertcase.net/ | UPPER CASE       | henrique              | HENRIQUE              |
 	
