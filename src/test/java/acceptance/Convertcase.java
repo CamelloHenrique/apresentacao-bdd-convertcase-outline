@@ -2,6 +2,8 @@ package acceptance;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -42,7 +44,7 @@ public class Convertcase {
 	    // Write code here that turns the phrase above into concrete actions
 		driver.findElement(By.id(recuperarIdDoBotao(botao))).click();
 	}
-	
+
 	private String recuperarIdDoBotao(String botao){
 		switch (botao) {
 		case "UPPER CASE":
@@ -59,8 +61,8 @@ public class Convertcase {
 	@Then("^\"(.*?)\" deve ser convertido para \"(.*?)\"$")
 	public void deve_ser_convertido_para(String input, String output) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-		String was = driver.findElement(By.id("content")).getAttribute("value");
-		assertThat(output).isEqualTo(was);
+		String actual = driver.findElement(By.id("content")).getAttribute("value");
+		assertThat(output).isEqualTo(actual);
 	}
 
 }
