@@ -38,23 +38,19 @@ public class ConvertCase {
 		driver.findElement(By.id(painel)).sendKeys(str);
 	}
 
+	private String recuperarIdDoBotao(String botao){
+		return switch (botao) {
+			case "UPPER CASE" -> "upper";
+			case "lower case" -> "lower";
+			case "Capitalized Case" -> "capitalized";
+			default -> "";
+		};
+	}
+
 	@When("^E clicar em \"(.*?)\"$")
 	public void e_clicar_em(String botao) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
 		driver.findElement(By.id(recuperarIdDoBotao(botao))).click();
-	}
-
-	private String recuperarIdDoBotao(String botao){
-		switch (botao) {
-			case "UPPER CASE":
-				return "upper";
-			case "lower case":
-				return "lower";
-			case "Capitalized Case":
-				return "capitalized";
-			default:
-				return "";
-		}
 	}
 
 	@Then("^\"(.*?)\" deve ser convertido para \"(.*?)\"$")
